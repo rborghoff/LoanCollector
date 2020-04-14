@@ -8,11 +8,11 @@ import com.example.loancollector.R
 
 class SplashActivity : AppCompatActivity() {
 
-    private val splashDelay: Long = 2500;
+    private val splashDelay: Long = 2500
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash)
 
         goToHomeScreen();
     }
@@ -20,12 +20,12 @@ class SplashActivity : AppCompatActivity() {
     private fun goToHomeScreen(){
         // Use Handler to wait 1 second before opening the HomeActivity.
         Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, HomeActivity::class.java));
+            startActivity(Intent(this@SplashActivity, HomeActivity::class.java))
             // Call finish, so user can not return to splash screen.
-            finish();
+            finish()
 
             // Animation to fade in and fade out the SplashActivity.
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-        }, splashDelay);
+            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        }, splashDelay)
     }
 }

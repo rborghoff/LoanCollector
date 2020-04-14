@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.androidcourse.bottomnavigationviewkotlin.MainActivity">
     <item
-        android:id="@+id/homeFragment"
+        android:id="@+id/homeFragment2"
         android:icon="@drawable/ic_home_black_24dp"
         android:title="Home" />
     <item

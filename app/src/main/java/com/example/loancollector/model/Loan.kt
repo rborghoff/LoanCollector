@@ -14,17 +14,12 @@ data class Loan (
     @ColumnInfo(name = "title")
     var title:String,
 
-    @ColumnInfo(name = "aan")
-    var aan:String,
-
     @ColumnInfo(name ="naam")
     var naam:String,
 
     @ColumnInfo(name = "amount")
     var amount:Double,
 
-    @ColumnInfo(name = "image")
-    var image: Uri,
 
     @ColumnInfo(name = "omschrijving")
     var omschrijving: String,

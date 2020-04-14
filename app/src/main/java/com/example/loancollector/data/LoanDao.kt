@@ -1,10 +1,7 @@
 package com.example.loancollector.data
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 import com.example.loancollector.model.Loan
 
 @Dao
@@ -21,4 +18,9 @@ interface LoanDao {
 
     @Delete
     suspend fun deleteLoan(loan: Loan)
+
+    @Update
+    suspend fun updateLoan(loan: Loan)
+
+
 }

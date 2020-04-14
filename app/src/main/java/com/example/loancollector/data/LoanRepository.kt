@@ -15,4 +15,5 @@ private val loanDao:LoanDao
     suspend fun insertLoan(loan: Loan)  = loanDao.insertLoan(loan)
     suspend fun deleteLoan(loan: Loan) = loanDao.deleteLoan(loan)
     suspend fun deleteAllLoanes() = loanDao.deleteAllLoanes()
+    suspend fun updateLoan(loan: Loan)= loanDao.updateLoan(loan)
 }

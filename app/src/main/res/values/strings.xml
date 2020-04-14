@@ -10,4 +10,13 @@
     <string name="description_avatar_groot">Groot plaatje</string>
     <string name="description_avatar_klein">Klein plaatje</string>
 
+
+    <!-- Strings used for Add Loan -->
+    <string name="placeholder_add_title">Title</string>
+    <string name="placeholder_add_naam">Aan wie?</string>
+    <string name="placeholder_add_hoeveelheid">hoeveel?</string>
+    <string name="placeholder_add_description">Geef een omschrijving</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
