@@ -19,4 +19,13 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <!-- Strings used for Rating -->
+    <string name="rate_instruction">Please rate us</string>
+    <string name="rate_rate">Submit Stars</string>
+    <string name="rate_thank_you">Thank you for rating us %d stars</string>
+
+    <!--String used for Loan Detail -->
+
+    <!--Strings used for App info -->
+
 </resources>

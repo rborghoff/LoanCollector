@@ -24,7 +24,7 @@ const val REQUEST_CODE = 100;
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var bottomNavigation: BottomNavigationView
-    private lateinit var toolbar: Toolbar
+//    private lateinit var toolbar: Toolbar
     private lateinit var view: View
 
     private var fragment: Fragment? = null
@@ -33,6 +33,7 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
+        setSupportActionBar(toolbar)
         fragment = supportFragmentManager.findFragmentById(R.id.homeFragment2)
 
         viewModel = ViewModelProviders.of(this).get(AppViewModel ::class.java)
@@ -66,12 +67,23 @@ class HomeActivity : AppCompatActivity() {
 
         NavigationUI.setupWithNavController(navView, navController)
         val appBarConfiguration = AppBarConfiguration(navController.graph)
+        toolbar.setupWithNavController(navController, appBarConfiguration)
+
+        // Add a Destination Changed Listener. This gets called whenever the navigation controller is navigating to another fragment.
         navController.addOnDestinationChangedListener { controller, destination, arguments ->
             when (destination.id) {
                 R.id.homeFragment2 -> showBottomNavigationBar(true)
-
+                R.id.rateFragment -> showBottomNavigationBar(true)
+                R.id.ratedFragment -> showBottomNavigationBar(false)
             }
         }
+//        val appBarConfiguration = AppBarConfiguration(navController.graph)
+//        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+//            when (destination.id) {
+//                R.id.homeFragment2 -> showBottomNavigationBar(true)
+//
+//            }
+//        }
     }
     private fun showBottomNavigationBar(visible: Boolean) {
         when (visible) {

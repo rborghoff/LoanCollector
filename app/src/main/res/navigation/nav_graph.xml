@@ -10,4 +10,18 @@
         android:name="com.example.loancollector.ui.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/rateFragment2"
+        android:name="com.example.loancollector.ui.RateFragment"
+        android:label="ratefragment"
+        tools:layout="@layout/fragment_rate">
+        <action
+            android:id="@+id/action_rateFragment2_to_ratedFragment"
+            app:destination="@id/ratedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ratedFragment"
+        android:name="com.example.loancollector.ui.RatedFragment"
+        android:label="ratedfragment"
+        tools:layout="@layout/fragment_rated" />
 </navigation>
