@@ -24,7 +24,6 @@ const val REQUEST_CODE = 100;
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var bottomNavigation: BottomNavigationView
-//    private lateinit var toolbar: Toolbar
     private lateinit var view: View
 
     private var fragment: Fragment? = null
@@ -41,8 +40,6 @@ class HomeActivity : AppCompatActivity() {
         fabAddLoan.setOnClickListener {
             onAddClick()
         }
-//
-//        setToolbar()
         initNavigation()
     }
 
@@ -77,13 +74,6 @@ class HomeActivity : AppCompatActivity() {
                 R.id.ratedFragment -> showBottomNavigationBar(false)
             }
         }
-//        val appBarConfiguration = AppBarConfiguration(navController.graph)
-//        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-//            when (destination.id) {
-//                R.id.homeFragment2 -> showBottomNavigationBar(true)
-//
-//            }
-//        }
     }
     private fun showBottomNavigationBar(visible: Boolean) {
         when (visible) {
@@ -101,11 +91,12 @@ class HomeActivity : AppCompatActivity() {
 
 
                     viewModel.insertLoan(reminder)
-
+                    val refresh = intent;
+                    startActivity(refresh);
+                    finish();
                 }
             }
         }
-        super.onActivityResult(requestCode, resultCode, data)
     }
 
 

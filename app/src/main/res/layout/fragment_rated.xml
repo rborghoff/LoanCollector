@@ -8,7 +8,7 @@
     tools:context=".ui.RatedFragment" >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvTnx"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/rate_thank_you"
@@ -16,6 +16,18 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/gifbean"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTnx"
+        app:layout_constraintVertical_bias="0.19" />
 </androidx.constraintlayout.widget.ConstraintLayout>

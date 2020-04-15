@@ -22,7 +22,7 @@
     <!-- Strings used for Rating -->
     <string name="rate_instruction">Please rate us</string>
     <string name="rate_rate">Submit Stars</string>
-    <string name="rate_thank_you">Thank you for rating us %d stars</string>
+    <string name="rate_thank_you">Thank you for rating us %.1f stars</string>
 
     <!--String used for Loan Detail -->
 
