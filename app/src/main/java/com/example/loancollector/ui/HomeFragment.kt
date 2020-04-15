@@ -1,6 +1,7 @@
 package com.example.loancollector.ui
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,22 +13,17 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.loancollector.LoanDetailActivity
 
 import com.example.loancollector.R
 import com.example.loancollector.model.Loan
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
-    private var loanId: Long? = null
-    private var loanTitle: String? = null
 
     private val loanList = arrayListOf<Loan>();
-    val loansAdapter = LoanAdapter(loanList) {
-        loanId = it.id;
-        loanTitle = it.title;
+    private val loansAdapter = LoanAdapter(loanList) { loan -> onMovieClick(loan) }
 
-//        openDetailActivity();
-    }
 
     private lateinit var myView: View
     private lateinit var viewModel: AppViewModel
@@ -60,10 +56,6 @@ class HomeFragment : Fragment() {
 
         createItemTouchHelper().attachToRecyclerView(rvLoans)
     }
-
-
-
-
     fun initViewModel() {
         viewModel = ViewModelProvider(this).get(AppViewModel::class.java)
 
@@ -75,11 +67,18 @@ class HomeFragment : Fragment() {
         })
     }
 
-    /**
-     * Create a touch helper to recognize when a user swipes an item from a recycler view.
-     * An ItemTouchHelper enables touch behavior (like swipe and move) on each ViewHolder,
-     * and uses callbacks to signal when a user is performing these actions.
-     */
+    private fun onMovieClick(loan: Loan) {
+        val intent = Intent(getActivity(), LoanDetailActivity::class.java)
+        val item = Bundle()
+        item.putParcelable("Loan", loan)
+        intent.putExtras(item)
+        startActivity(intent)
+    }
+
+
+
+
+
     private fun createItemTouchHelper(): ItemTouchHelper {
 
         // Callback which is used to create the ItemTouch helper. Only enables left swipe.
@@ -106,5 +105,7 @@ class HomeFragment : Fragment() {
         }
         return ItemTouchHelper(callback)
     }
+
+
 
 }

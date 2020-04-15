@@ -25,6 +25,12 @@
     <string name="rate_thank_you">Thank you for rating us %.1f stars</string>
 
     <!--String used for Loan Detail -->
+    <string name="loan_detail_placeholder_title">Placeholder Title</string>
+    <string name="loan_detail_placeholder_naam">Placeholder Naam</string>
+    <string name="loan_detail_placeholder_amount">50.00</string>
+    <string name="loan_detail_placeholder_detial">Lorem ipsum bogus text</string>
+    <string name="loan_detail_aan">Aan</string>
+    <string name="loan_detail_hoeveel">Hoeveel</string>
 
     <!--Strings used for App info -->
 

@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
@@ -13,6 +12,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.example.loancollector.AddLoanActivity
+import com.example.loancollector.LoanDetailActivity
 import com.example.loancollector.R
 import com.example.loancollector.model.Loan
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -25,18 +25,16 @@ class HomeActivity : AppCompatActivity() {
 
     private lateinit var bottomNavigation: BottomNavigationView
     private lateinit var view: View
-
     private var fragment: Fragment? = null
     private lateinit var viewModel: AppViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
         fragment = supportFragmentManager.findFragmentById(R.id.homeFragment2)
-
         viewModel = ViewModelProviders.of(this).get(AppViewModel ::class.java)
-
         fabAddLoan.setOnClickListener {
             onAddClick()
         }
@@ -81,6 +79,7 @@ class HomeActivity : AppCompatActivity() {
             false -> navView.visibility = View.GONE
         }
     }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
