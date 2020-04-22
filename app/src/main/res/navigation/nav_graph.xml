@@ -8,12 +8,12 @@
     <fragment
         android:id="@+id/homeFragment2"
         android:name="com.example.loancollector.ui.HomeFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/rateFragment"
         android:name="com.example.loancollector.ui.RateFragment"
-        android:label="ratefragment"
+        android:label="Rate Us"
         tools:layout="@layout/fragment_rate">
         <action
             android:id="@+id/action_rateFragment_to_ratedFragment"
@@ -22,8 +22,8 @@
     <fragment
         android:id="@+id/ratedFragment"
         android:name="com.example.loancollector.ui.RatedFragment"
-        android:label="ratedfragment"
-        tools:layout="@layout/fragment_rated" >
+        android:label="Thank You"
+        tools:layout="@layout/fragment_rated">
         <argument
             android:name="rating"
             app:argType="float" />
@@ -31,4 +31,9 @@
             android:id="@+id/action_ratedFragment_to_homeFragment2"
             app:destination="@id/homeFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.loancollector.InfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

@@ -33,5 +33,12 @@
     <string name="loan_detail_hoeveel">Hoeveel</string>
 
     <!--Strings used for App info -->
+    <string name="info_fragment_title">App Info</string>
+    <string name="info_title_doel">Het doel van de app</string>
+    <string name="info_text_doel">De app is bedoeld voor mensen die regelmatig geld of items uitlenen en een methode zoeken om deze
+    leningen te registreren omdat ze simpelweg vaak gewoon vergeten worden door een of beide partijen.</string>
+    <string name="info_title_hoe">Hoe werkt de app?</string>
+    <string name="info_text_hoe">Druk op het hoofdscherm op het plusje, voer de gegevens in en let hierbij op dat je bij bedragen een punt (.) gebruikt in plaats van een comma (,) en sla het item op.
+    wanneer je in het homescherm bent zie je al de aangemaakte items staan, wanneer je een item naar rechts swiped dan verwijder je het desbetreffende item, wanneer je op een item klikt krijg je alle deteals over het item te zien.</string>
 
 </resources>
