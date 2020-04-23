@@ -35,20 +35,9 @@ class HomeActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         fragment = supportFragmentManager.findFragmentById(R.id.homeFragment2)
         viewModel = ViewModelProviders.of(this).get(AppViewModel ::class.java)
-        fabAddLoan.setOnClickListener {
-            onAddClick()
-        }
         initNavigation()
     }
 
-    private fun onAddClick() {
-        // From HomeActivity to AddActivity.
-        val nextIntent = Intent(this@HomeActivity, AddLoanActivity::class.java)
-        startActivityForResult(nextIntent, REQUEST_CODE)
-
-        // Animation to fade into the AddActivity.
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-    }
 
     private fun setToolbar() {
 
@@ -81,22 +70,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
-            when (requestCode) {
-                REQUEST_CODE -> {
-                    val reminder = data!!.getParcelableExtra<Loan>(AddLoanActivity.EXTRA_ITEM)
 
-
-                    viewModel.insertLoan(reminder)
-                    val refresh = intent;
-                    startActivity(refresh);
-                    finish();
-                }
-            }
-        }
-    }
 
 
 }
