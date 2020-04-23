@@ -27,6 +27,7 @@ class RatedFragment : Fragment() {
         tvTnx.text = getString(R.string.rate_thank_you,args.rating)
         goToHomeScreen()
 
+
     }
     private val splashDelay: Long = 2500
     private fun goToHomeScreen(){
@@ -35,6 +36,7 @@ class RatedFragment : Fragment() {
         Handler().postDelayed({
             val intent = Intent(getActivity(), HomeActivity::class.java)
             startActivity(intent)
+
 
             // Call finish, so user can not return to splash screen.
 

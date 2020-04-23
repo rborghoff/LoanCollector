@@ -45,12 +45,12 @@ onClick()
 
 
     private fun onClick() {
-        if (etLoanTitle.text.isNotBlank() && etLoanPerson.text.isNotBlank() && etLoanAmount.text.isNotBlank()&&etLoanDescription.text.isNotBlank()) {
+        if (etLoanTitle.text.isNotBlank() && etLoanPerson.text.isNotBlank()&&etLoanDescription.text.isNotBlank()) {
 
             val loan = Loan(
              etLoanTitle.text.toString(),
              etLoanPerson.text.toString(),
-             etLoanAmount.text.toString().toDouble(),
+             etAmount.text.toString().toDouble(),
              etLoanDescription.text.toString()
             )
             val resultIntent = Intent()
@@ -58,7 +58,7 @@ onClick()
             setResult(Activity.RESULT_OK, resultIntent)
             finish()
         } else {
-            Toast.makeText(this, "One of the fields or multiple are empty.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "One or multiple fields are empty.", Toast.LENGTH_LONG).show()
         }
         // Animation to fade into the IngredientsActivity.
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
