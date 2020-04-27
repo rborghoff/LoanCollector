@@ -13,7 +13,6 @@ import kotlinx.coroutines.launch
 import java.time.chrono.HijrahChronology.INSTANCE
 
 @Database(entities = [Loan::class],version = 1,exportSchema = false)
-@TypeConverters(typeConverter::class)
 abstract class LoanRoomDatabase :RoomDatabase() {
     abstract fun loanDao():LoanDao
 

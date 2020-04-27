@@ -1,7 +1,5 @@
 package com.example.loancollector.ui
 
-import android.app.Activity
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -11,10 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
-import com.example.loancollector.AddLoanActivity
-import com.example.loancollector.LoanDetailActivity
 import com.example.loancollector.R
-import com.example.loancollector.model.Loan
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import kotlinx.android.synthetic.main.activity_home.*
@@ -33,6 +28,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         setSupportActionBar(toolbar)
+        supportActionBar?.title = "Home"
         fragment = supportFragmentManager.findFragmentById(R.id.homeFragment2)
         viewModel = ViewModelProviders.of(this).get(AppViewModel ::class.java)
         initNavigation()

@@ -1,11 +1,10 @@
-package com.example.loancollector
+package com.example.loancollector.ui.loandetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
+import com.example.loancollector.R
 import com.example.loancollector.model.Loan
 import kotlinx.android.synthetic.main.activity_loan_detail.*
-import kotlinx.android.synthetic.main.loan_item.*
 
 class LoanDetailActivity : AppCompatActivity() {
 
@@ -27,13 +26,4 @@ class LoanDetailActivity : AppCompatActivity() {
         }
     }
 
-
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return try {
-//            finish()
-//            true
-//        } catch (exception: Exception) {
-//            false
-//        }
-//    }
 }

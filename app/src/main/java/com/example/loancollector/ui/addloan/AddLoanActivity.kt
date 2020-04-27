@@ -1,4 +1,4 @@
-package com.example.loancollector
+package com.example.loancollector.ui.addloan
 
 import android.app.Activity
 import android.content.Intent
@@ -6,12 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+import com.example.loancollector.R
 import com.example.loancollector.model.Loan
 import com.example.loancollector.ui.AppViewModel
 import kotlinx.android.synthetic.main.activity_add_loan.*
-import kotlinx.android.synthetic.main.loan_item.*
 
 
 class AddLoanActivity : AppCompatActivity() {
@@ -60,8 +58,7 @@ onClick()
         } else {
             Toast.makeText(this, "One or multiple fields are empty.", Toast.LENGTH_LONG).show()
         }
-        // Animation to fade into the IngredientsActivity.
-        overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+   
     }
 
     companion object {

@@ -1,4 +1,4 @@
-package com.example.loancollector.ui
+package com.example.loancollector.ui.fragments
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -13,17 +13,23 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.loancollector.AddLoanActivity
-import com.example.loancollector.LoanDetailActivity
+import com.example.loancollector.ui.addloan.AddLoanActivity
+import com.example.loancollector.ui.loandetail.LoanDetailActivity
 
 import com.example.loancollector.R
 import com.example.loancollector.model.Loan
+import com.example.loancollector.ui.AppViewModel
+import com.example.loancollector.ui.LoanAdapter
+import com.example.loancollector.ui.REQUEST_CODE
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment() {
 
     private val loanList = arrayListOf<Loan>();
-    private val loansAdapter = LoanAdapter(loanList) { loan -> onMovieClick(loan) }
+    private val loansAdapter =
+        LoanAdapter(loanList) { loan ->
+            onMovieClick(loan)
+        }
 
 
     private lateinit var myView: View
@@ -109,7 +115,9 @@ class HomeFragment : Fragment() {
     private fun onAddClick() {
         // From HomeActivity to AddActivity.
         val nextIntent = Intent(getActivity(), AddLoanActivity::class.java)
-        startActivityForResult(nextIntent, REQUEST_CODE)
+        startActivityForResult(nextIntent,
+            REQUEST_CODE
+        )
 
     }
 

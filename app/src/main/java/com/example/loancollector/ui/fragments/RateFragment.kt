@@ -1,4 +1,4 @@
-package com.example.loancollector.ui
+package com.example.loancollector.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 
 import com.example.loancollector.R
+import com.example.loancollector.ui.fragments.RateFragmentDirections
 import kotlinx.android.synthetic.main.fragment_rate.*
 
 
@@ -26,7 +27,10 @@ class RateFragment : Fragment() {
 
         // Navigate to RatedFragment and send the rating as arguments.
         btnRate.setOnClickListener {
-            val action = RateFragmentDirections.actionRateFragmentToRatedFragment(rbStars.rating)
+            val action =
+                RateFragmentDirections.actionRateFragmentToRatedFragment(
+                    rbStars.rating
+                )
             findNavController().navigate(action)
         }
     }

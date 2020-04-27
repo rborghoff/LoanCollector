@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/homeFragment2"
-        android:name="com.example.loancollector.ui.HomeFragment"
+        android:name="com.example.loancollector.ui.fragments.HomeFragment"
         android:label="Home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/rateFragment"
-        android:name="com.example.loancollector.ui.RateFragment"
+        android:name="com.example.loancollector.ui.fragments.RateFragment"
         android:label="Rate Us"
         tools:layout="@layout/fragment_rate">
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/ratedFragment"
-        android:name="com.example.loancollector.ui.RatedFragment"
+        android:name="com.example.loancollector.ui.fragments.RatedFragment"
         android:label="Thank You"
         tools:layout="@layout/fragment_rated">
         <argument
@@ -33,7 +33,7 @@
     </fragment>
     <fragment
         android:id="@+id/infoFragment"
-        android:name="com.example.loancollector.InfoFragment"
+        android:name="com.example.loancollector.ui.fragments.InfoFragment"
         android:label="Info"
         tools:layout="@layout/fragment_info" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.loancollector.ui
+package com.example.loancollector.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.example.loancollector.R
+import com.example.loancollector.ui.HomeActivity
+import com.example.loancollector.ui.fragments.RatedFragmentArgs
 import kotlinx.android.synthetic.main.fragment_rated.*
 
 
