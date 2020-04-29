@@ -27,6 +27,7 @@ class AppViewModel (application: Application) : AndroidViewModel(application) {
         }
     }
 
+    // wel er in gezet maar het nut niet gezien om alles in een keer te willen verwijderen
     fun deleteAllLoanes() {
         ioScope.launch {
             loanRepository.deleteAllLoanes()

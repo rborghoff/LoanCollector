@@ -36,7 +36,7 @@ abstract class LoanRoomDatabase :RoomDatabase() {
                                     super.onCreate(db)
                                     INSTANCE?.let { database ->
                                         CoroutineScope(Dispatchers.IO).launch {
-                                            database.loanDao().insertLoan(Loan("Title", "title",2.0, "maandag",3))
+                                            database.loanDao().insertLoan(Loan("Etentje", "Kees",2.0, "maandag",1))
                                         }
                                     }
                                 }

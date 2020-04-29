@@ -34,13 +34,12 @@ class RatedFragment : Fragment() {
     private val splashDelay: Long = 2500
     private fun goToHomeScreen(){
 
-        // Use Handler to wait 1 second before opening the HomeActivity.
+        // Use Handler to wait 2,5 second before opening the HomeActivity.
         Handler().postDelayed({
             val intent = Intent(getActivity(), HomeActivity::class.java)
             startActivity(intent)
 
 
-            // Call finish, so user can not return to splash screen.
 
         }, splashDelay )
 

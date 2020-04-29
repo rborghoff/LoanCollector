@@ -18,8 +18,7 @@ import kotlinx.android.synthetic.main.content_home.*
 const val REQUEST_CODE = 100;
 class HomeActivity : AppCompatActivity() {
 
-    private lateinit var bottomNavigation: BottomNavigationView
-    private lateinit var view: View
+ 
     private var fragment: Fragment? = null
     private lateinit var viewModel: AppViewModel
 
@@ -34,12 +33,6 @@ class HomeActivity : AppCompatActivity() {
         initNavigation()
     }
 
-
-    private fun setToolbar() {
-
-        bottomNavigation = findViewById(R.id.navView)
-        view = findViewById(R.id.parentMain)
-    }
 
     private fun initNavigation() {
         // The NavController.

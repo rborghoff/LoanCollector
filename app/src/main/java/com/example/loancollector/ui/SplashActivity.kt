@@ -8,7 +8,7 @@ import com.example.loancollector.R
 
 class SplashActivity : AppCompatActivity() {
 
-    private val splashDelay: Long = 2500
+    private val splashDelay: Long = 2000
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
@@ -18,7 +18,7 @@ class SplashActivity : AppCompatActivity() {
     }
 
     private fun goToHomeScreen(){
-        // Use Handler to wait 1 second before opening the HomeActivity.
+        // Use Handler to wait 2 seconds before opening the HomeActivity.
         Handler().postDelayed({
             startActivity(Intent(this@SplashActivity, HomeActivity::class.java))
             // Call finish, so user can not return to splash screen.

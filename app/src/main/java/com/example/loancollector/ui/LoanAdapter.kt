@@ -15,8 +15,6 @@ class LoanAdapter (private val loanes: List<Loan>, private val onClick: (Loan) -
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-//        context = parent.context;
-//        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.loan_item, parent, false))
         val view = LayoutInflater.from(parent.context).inflate(R.layout.loan_item, parent, false)
         return ViewHolder(view)
     }

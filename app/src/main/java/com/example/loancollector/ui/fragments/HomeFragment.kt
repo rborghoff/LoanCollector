@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
     private val loanList = arrayListOf<Loan>();
     private val loansAdapter =
         LoanAdapter(loanList) { loan ->
-            onMovieClick(loan)
+            onLoanClick(loan)
         }
 
 
@@ -55,7 +55,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun initViews() {
-        // Reverse Layout is true.
+
         val layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, true)
         rvLoans.layoutManager = layoutManager
         layoutManager.stackFromEnd = true
@@ -76,7 +76,8 @@ class HomeFragment : Fragment() {
         })
     }
 
-    private fun onMovieClick(loan: Loan) {
+    // vanuit fragment naar activity is get Activity ipv this in de intent
+    private fun onLoanClick(loan: Loan) {
         val intent = Intent(getActivity(), LoanDetailActivity::class.java)
         val item = Bundle()
         item.putParcelable("Loan", loan)
@@ -103,10 +104,10 @@ class HomeFragment : Fragment() {
 
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
                 val position = viewHolder.adapterPosition
-                val recipeToDelete = loanList[position]
+                val loanToDelete = loanList[position]
 
 
-                viewModel.deleteLoan(recipeToDelete)
+                viewModel.deleteLoan(loanToDelete)
             }
         }
         return ItemTouchHelper(callback)

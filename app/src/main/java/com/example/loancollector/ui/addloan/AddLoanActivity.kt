@@ -33,8 +33,6 @@ onClick()
         when (item?.itemId) {
             android.R.id.home -> {
                 finish();
-                // Fading animation when returning to previous activity.
-                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 return true;
             }
         }
